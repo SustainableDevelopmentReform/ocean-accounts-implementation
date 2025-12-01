@@ -1,0 +1,14 @@
+{
+  "name": "093127150be4c519",
+  "main": "093127150be4c519@357.js",
+  "version": "357.0.0",
+  "homepage": "https://observablehq.com/d/093127150be4c519",
+  "author": {
+    "name": "Maria Alarcon",
+    "url": "https://observablehq.com/@maria-alarcon"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
