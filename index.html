@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Global progress in ocean accounting</title>
-<link rel="stylesheet" type="text/css" href="./inspector.css">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global progress in ocean accounting</title>
+  <link rel="stylesheet" type="text/css" href="./inspector.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    #observablehq-main {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
 <body>
-<script type="module">
+  <div id="observablehq-main"></div>
+  
+  <script type="module">
+    import define from "./index.js";
+    import {Runtime, Inspector} from "./runtime.js";
 
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
-
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
-
-</script>
+    const runtime = new Runtime();
+    const main = runtime.module(define, name => {
+      const node = document.querySelector(`#observablehq-${name}`);
+      if (node) {
+        return new Inspector(node);
+      }
+      // Render unnamed cells into main container
+      const mainNode = document.querySelector("#observablehq-main");
+      if (mainNode && name === undefined) {
+        return new Inspector(mainNode.appendChild(document.createElement("div")));
+      }
+    });
+  </script>
+</body>
+</html>
