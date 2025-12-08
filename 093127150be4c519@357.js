@@ -1191,6 +1191,35 @@ The maps below show both the range of implementation (how many of these six comp
     <!-- Regional Initiatives -->
     ${regionalInitiativesDisplay}
   </div>
+  <!-- Repository Link -->
+    <div style="margin-top: 60px; padding: 30px; background: #f8f9fa; border-radius: 10px; text-align: center; border: 2px solid #0077b6;">
+      <h3 style="margin-top: 0; color: #333; font-size: 22px;">📊 Data & Code Repository</h3>
+      <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+        All data, code, and documentation for this interactive visualization are openly available on GitHub.
+      </p>
+      <a href="https://github.com/SustainableDevelopmentReform/ocean-accounts-implementation" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         style="
+           display: inline-block;
+           padding: 12px 30px;
+           background: #0077b6;
+           color: white;
+           text-decoration: none;
+           border-radius: 6px;
+           font-size: 16px;
+           font-weight: 600;
+           transition: background 0.3s ease;
+         "
+         onmouseover="this.style.background='#005a8d'"
+         onmouseout="this.style.background='#0077b6'">
+        View Repository on GitHub → https://github.com/SustainableDevelopmentReform/ocean-accounts-implementation/blob/main/data/OA_global_stocktake_data.csv
+      </a>
+      <p style="color: #888; font-size: 14px; margin-top: 15px; margin-bottom: 0;">
+        Cite: Alarcon et al. (2025). Global progress in ocean accounting for sustainable development.
+      </p>
+    </div>
+  </div>
 `
 )}
 
